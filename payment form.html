@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <div class="container">
+        <form action="" method="get">
+    <h1 class="main_heading">Payment Form</h1>
+    <P> Required Fileds are Followed By *</P>
+    <h2>Contact Information</h2>
+    <p>Name: *<input type="text" name="name" required placeholder="Rushabh Dabhade"></p>                                                  <!-- 1)name is attribute use to store a value by user added -->
+    <fieldset>                                                                                    <!-- 1)fieldset is use for making box 2)legend give name to box-->
+        <LEgend>Gender *</LEgend>
+        <p>
+            Male <input type="radio" name="gender" id="male" required>            <!-- 1)here radio use for select option 2)name should be same so we can select only one option 3)id can be unique 4) input use to take input -->
+            female<input type="radio" name="gender" id="female" required>
+        </p>
+    </fieldset>
+    <p> Address: <textarea name="address" id="address" cols="50" placeholder="Enter Your Address"></textarea></p>                 <!--for address we use textarea because it is a long content-->
+    <p>Email: *<input type="email" name="email" id="email" required placeholder="dabhaderushabh8087@gmail.com"></p>                                   <!-- email  input type suggest us that the given email contain @,.com,etc-->
+    <p> Pincode:* <input type="number" name="Pincode" id="pincode" required placeholder="425001"></p>                            <!--as pincode is a number we use  number input type-->
+    <hr>
+    <h2> payment Information</h2>
+    <p> Card Type: *
+        <select  name =" card_type" id=" card_type" required> 
+            <option value="">--Select a Card Type</option>
+            <option value="VISA">VISA</option>
+            <option value="RUPAY">RUPAY</option>
+            <option value="MASTERCARD">MASTERCARD</option>
+        </select>
+    </p>
+    <p>
+        Card Number *<input type="number" name="card_number" id="card_number" required placeholder="1111-2222-3333-4444">
+    </p>
+    <p>
+        Expiration Date: *<input type="date" name="exp_date" id="exp_date" required>
+    </p>
+    <p>
+        CVV *<input type="password" name="CVV" id="CVV" required placeholder="123">                <!--placeholder give info about what to write in that blank space like name email-->
+    </p>
+    <input type="submit" value="PAY NOW">
+</form>
+</body>
+</div>
+</html>

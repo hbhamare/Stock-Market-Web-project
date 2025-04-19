@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+        <style>
+            .container
+            {
+                display : grid;                                  /*1)here display grid convert container as parent box & */
+                grid-template-columns: repeat(auto-fill,minmax(300px,1fr));/*2)grid-template-columns use to modify the grid according our need*/
+                grid-gap: 20px;                            /*3)it use to create a gap or margin*/
+                grid-auto-rows: minmax(100px,auto);        /*here minmax function use to maintain the size of box according contents*/
+                grid-auto-columns:minmax(50px,auto) ;
+
+
+            }
+            .item
+            {
+                background-color: lawngreen;
+                border: 3px black solid ;
+                border-radius: 3px;
+
+            }
+            #item1
+            {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            #item2
+            {
+                grid-row-start: 2;        /*using these we can shift location of box horizonatlly*/
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+              
+            }
+            .item-1-container{           /*this is the nested parent container*/
+                display: grid;
+                grid-template-rows: repeat(3,1fr);
+            }
+            .nested-item
+            {
+                border: 3px royalblue solid;
+                border-radius: 3px;
+                background-color:#e31dd6;
+            }
+        </style>
+</head>
+<body>
+    <div  class="container">  <!--1)here we use div to create box or container-->
+        <div class="item item-1-container" id="item1">
+            <div class="nested-item">dabba mai dabba 1</div>        <!--here we created the nested box-->
+            <div class="nested-item">dabba mai dabba 2</div>
+            <div class="nested-item">dabba mai dabba 3</div>
+        </div>       
+        <div class="item" id="item2">Dabba 2</div> <!--here we created child class[box,container]-->
+        <div class="item">Dabba 3</div>
+        <div class="item">Dabba 4</div>
+        <div class="item">Dabba 5</div>
+
+    </div>
+</body>
+</html>
